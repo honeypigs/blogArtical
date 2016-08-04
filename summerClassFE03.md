@@ -74,14 +74,43 @@ dpr = 物理像素/css像素
 > `device-width/height`使用以设备的pixels度量的设备屏幕`device screen` ,反映screen.width/height；
 
 ## 几个mate的content值
-|Name	        |   Value	           |  Description            |
-| ------        | ------------------   | :---------------------: |
-|width	        | 正整数或device-width  |	 定义视口的宽度，单位为像素 |
-|height	        | 正整数或device-height |	 定义视口的高度，单位为像素 |
-|initial-scale	| [0.0-10.0]           | 定义初始缩放值 |
-|minimum-scale	| [0.0-10.0]   	       | 定义缩小最小比例，它必须小于或等于maximum-scale设置 |
-|maximum-scale	| [0.0-10.0]	           | 定义放大最大比例，它必须大于或等于minimum-scale设置 |
-|user-scalable	| yes/no	           | 定义是否允许用户手动缩放页面，默认值yes |
+<table>
+    <tr>
+        <td>Name</td>
+		<td>Value</td>
+		<td>Description</td>
+    </tr>
+<tr>
+        <td>width</td>
+		<td>正整数或device-width</td>
+		<td>定义视口的宽度，单位为像素</td>
+    </tr>
+<tr>
+        <td>height</td>
+		<td>正整数或device-height</td>
+		<td>定义视口的高度，单位为像素</td>
+    </tr>
+<tr>
+        <td>initial-scale</td>
+		<td>[0.0-10.0]  </td>
+		<td>定义初始缩放值</td>
+    </tr>
+<tr>
+        <td>minimum-scale</td>
+		<td>[0.0-10.0]  </td>
+		<td>定义缩小最小比例，它必须小于或等于maximum-scale设置</td>
+    </tr>
+<tr>
+        <td>maximum-scale</td>
+		<td>[0.0-10.0]  </td>
+		<td>定义放大最大比例，它必须大于或等于minimum-scale设置</td>
+    </tr>
+<tr>
+        <td>user-scalable</td>
+		<td>yes/no</td>
+		<td>定义是否允许用户手动缩放页面，默认值yes</td>
+    </tr>
+</table>
 
 ## 媒体查询
 > 媒体查询是可应用于 CSS 样式的简单过滤器。有了这些过滤器，我们可以根据设备呈现内容的特点轻松更改样式，包括显示屏类型、宽度、高度、方向甚至是分辨率。
@@ -94,30 +123,53 @@ dpr = 物理像素/css像素
 
 逻辑操作符
 and not only
-
-```css
-@media (query) {
-  /* CSS Rules used when query matches */
-}
-```
+	
+	```css
+	@media (query) {
+	  /* CSS Rules used when query matches */
+	}
+	```
 查询语句可以写多条
-```css
-@media (query) and (query) {
-  /* CSS Rules used when query matches */
-}
-```
+
+	```css
+	@media (query) and (query) {
+	  /* CSS Rules used when query matches */
+	}
+	```
+
+<table>
+    <tr>
+        <td>属性</td>
+		<td>结果</td>
+    </tr>
+<tr>
+        <td>min-width</td>
+		<td>当任意浏览器宽度大于查询中定义的值时适用的规则</td>
+    </tr>
+<tr>
+        <td>max-width</td>
+		<td>当任意浏览器宽度大于查询中定义的值时适用的规则</td>
+    </tr>
+<tr>
+        <td>min-height</td>
+		<td>当任意浏览器高度大于查询中定义的值时适用的规则</td>
+    </tr>
+<tr>
+        <td>max-height</td>
+		<td>当任意浏览器高度小于查询中定义的值时适用的规则</td>
+    </tr>
+<tr>
+        <td>orientation=portrait</td>
+		<td>高度大于或等于宽度的任意浏览器适用的规则</td>
+    </tr>
+<tr>
+        <td>orientation=landscape</td>
+		<td>宽度大于高度的任意浏览器适用的规则</td>
+    </tr>
+</table>
 
 
-| 属性                   |            结果            |
-| --------------------- | :----------------------: |
-| min-width             | 当任意浏览器宽度大于查询中定义的值时适用的规则  |
-| max-width             | 当任意浏览器宽度大于查询中定义的值时适用的规则。 |
-| min-height            | 当任意浏览器高度大于查询中定义的值时适用的规则。 |
-| max-height            | 当任意浏览器高度小于查询中定义的值时适用的规则。 |
-| orientation=portrait  |  高度大于或等于宽度的任意浏览器适用的规则。   |
-| orientation=landscape |    宽度大于高度的任意浏览器适用的规则     |
-
-更多高级的用法: https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries
+更多高级的用法: [https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries)
 
 
 
